@@ -11,9 +11,10 @@ root.render(
     <Router>
        <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/home' element={<Home/>}/>
-            <Route path='/courses' element={<App/>}/>
-            <Route path='/discussions' element={<Discussions/>}/>
+            <Route path='/CodeMentorHub' element={<Home/>}/>
+            <Route path='/CodeMentorHub/home' element={<Home/>}/>
+            <Route path='/CodeMentorHub/courses' element={<App/>}/>
+            <Route path='/CodeMentorHub/discussions' element={<Discussions/>}/>
        </Routes>
     </Router>
  
