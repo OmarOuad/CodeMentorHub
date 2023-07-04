@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/CodeMentorHub/static/css/main.4bed3082.css",
-    "main.js": "/CodeMentorHub/static/js/main.cf0a611d.js",
+    "main.js": "/CodeMentorHub/static/js/main.c035f546.js",
     "static/media/programmer.png": "/CodeMentorHub/static/media/programmer.09e0b0a6c9a4129c831f.png",
     "index.html": "/CodeMentorHub/index.html",
     "main.4bed3082.css.map": "/CodeMentorHub/static/css/main.4bed3082.css.map",
-    "main.cf0a611d.js.map": "/CodeMentorHub/static/js/main.cf0a611d.js.map"
+    "main.c035f546.js.map": "/CodeMentorHub/static/js/main.c035f546.js.map"
   },
   "entrypoints": [
     "static/css/main.4bed3082.css",
-    "static/js/main.cf0a611d.js"
+    "static/js/main.c035f546.js"
   ]
 }
