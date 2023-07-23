@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/CodeMentorHub/static/css/main.bd5a0fe3.css",
-    "main.js": "/CodeMentorHub/static/js/main.f506f270.js",
+    "main.css": "/CodeMentorHub/static/css/main.89313421.css",
+    "main.js": "/CodeMentorHub/static/js/main.2db39914.js",
     "static/media/programmer2.jpg": "/CodeMentorHub/static/media/programmer2.02cf9ae331c17fdf43c1.jpg",
     "static/media/myicon.jpeg": "/CodeMentorHub/static/media/myicon.7de5d044d6741e78dd45.jpeg",
     "static/media/programmer.png": "/CodeMentorHub/static/media/programmer.09e0b0a6c9a4129c831f.png",
+    "static/media/checkmark.png": "/CodeMentorHub/static/media/checkmark.54ccbf23949aee613e4e.png",
     "index.html": "/CodeMentorHub/index.html",
-    "main.bd5a0fe3.css.map": "/CodeMentorHub/static/css/main.bd5a0fe3.css.map",
-    "main.f506f270.js.map": "/CodeMentorHub/static/js/main.f506f270.js.map"
+    "main.89313421.css.map": "/CodeMentorHub/static/css/main.89313421.css.map",
+    "main.2db39914.js.map": "/CodeMentorHub/static/js/main.2db39914.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd5a0fe3.css",
-    "static/js/main.f506f270.js"
+    "static/css/main.89313421.css",
+    "static/js/main.2db39914.js"
   ]
 }
