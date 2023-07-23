@@ -1,82 +1,61 @@
-import { useState } from "react";
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Courses from './Courses';
+import Home from './Home';
+import Discussions from './Discussions';
+import Ourteams from './Ourteams';
+import Test from './Test';
+import CourseDetails from './CourseDetails'; // Import the CourseDetails component
+import BuyCourse from './BuyCourse';
+import PurchaseSuccess from './PurchaseSuccess';
+import TutorRegistration from './TutorRegistration';
+import RegistrationSuccess from './RegistrationSuccess';
 
-import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import Navigation from "./Nav";
-import Products from "./Products/Products";
-import products from "./db/data";
-import Sidebar from "./Sidebar/Sidebar";
-import Card from "./components/Card";
-import "./index.css";
-import Home from "./Home";
+// Import the required i18next modules
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
+import enTranslations from './translations/en.json';
+import frTranslations from './translations/fr.json';
 
-function App() {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+i18n
+  .use(initReactI18next)
+  .init({
+    resources: {
+      en: {
+        translation: enTranslations,
+      },
+      fr: {
+        translation: frTranslations,
+      },
+    },
+    fallbackLng: 'en',
+    debug: true,
+    interpolation: {
+      escapeValue: false,
+    },
+  });
 
-  // ----------- Input Filter -----------
-  const [query, setQuery] = useState("");
-
-  const handleInputChange = (event) => {
-    setQuery(event.target.value);
-  };
-
-  const filteredItems = products.filter(
-    (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
-  );
-
-  // ----------- Radio Filtering -----------
-  const handleChange = (event) => {
-    setSelectedCategory(event.target.value);
-  };
-
-
-
-  function filteredData(products, selected, query) {
-    let filteredProducts = products;
-
-    // Filtering Input Items
-    if (query) {
-      filteredProducts = filteredItems;
-    }
-
-    // Applying selected filter
-    if (selected) {
-      filteredProducts = filteredProducts.filter(
-        ({ category, color, company, newPrice, title }) =>
-          category === selected ||
-          color === selected ||
-          company === selected ||
-          newPrice === selected ||
-          title === selected
-      );
-    }
-
-    return filteredProducts.map(
-      ({ img, title, star, reviews, prevPrice, newPrice }) => (
-        <Card
-          key={Math.random()}
-          img={img}
-          title={title}
-          star={star}
-          reviews={reviews}
-          prevPrice={prevPrice}
-          newPrice={newPrice}
-        />
-      )
-    );
-  }
-
-  const result = filteredData(products, selectedCategory, query);
-
+const App = () => {
   return (
-    <>
-      <Navigation query={query} handleInputChange={handleInputChange} />
-      
-      <Sidebar handleChange={handleChange} />
-      
-  <Products result={result} />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/CodeMentorHub" element={<Home />} />
+        <Route path="/CodeMentorHub/home" element={<Home />} />
+        <Route path="/CodeMentorHub/courses" element={<Courses />} />
+        <Route path="/CodeMentorHub/course/:id" element={<CourseDetails />} /> {/* New route for course details */}
+        <Route path="/CodeMentorHub/discussions" element={<Discussions />} />
+        <Route path="/CodeMentorHub/ourteams" element={<Ourteams />} />
+        <Route path="/CodeMentorHub/tests" element={<Test />} />
+        <Route path="/CodeMentorHub/BuyCourses" element={<BuyCourse />} />
+        <Route path="/CodeMentorHub/PurchaseSuccessful" element={<PurchaseSuccess />} />
+        <Route path="/CodeMentorHub/TutorRegistration" element={<TutorRegistration />} />
+        <Route path="/CodeMentorHub/RegistrationSuccess" element={<RegistrationSuccess />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

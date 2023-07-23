@@ -1,0 +1,43 @@
+.buy-course {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9e7ff; /* Light purple background color */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .buy-course h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333; /* Dark text color for the title */
+    margin-bottom: 20px;
+  }
+  
+  .buy-course form {
+    /* Styles for the form (if needed) */
+  }
+  
+  .buy-course form label {
+    font-weight: bold;
+    color: #333; /* Dark text color for labels */
+  }
+  
+  .buy-course form select {
+    /* Styles for the payment method dropdown (if needed) */
+  }
+  
+  .buy-course form input[type='text'],
+  .buy-course form input[type='email'],
+  .buy-course form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .buy-course form button[type='submit'],
+  .buy-course .return-btn {
+    margin-top: 20px;
+  }
+  

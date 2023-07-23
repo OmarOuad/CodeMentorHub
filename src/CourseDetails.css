@@ -1,0 +1,55 @@
+.course-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #7b68ee; /* Purple background color */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff; /* White text color for the title */
+    margin-bottom: 20px;
+  }
+  
+  .course-info h4,
+  .course-description h4 {
+    font-weight: bold;
+    color: #fff; /* White text color for headings */
+  }
+  
+  .course-info p,
+  .course-description p {
+    color: #f0f0f0; /* Light gray text color */
+    margin-bottom: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .buy-btn {
+    background-color: #ff1493; /* Pink background color */
+    color: #fff; /* White text color for the button */
+  }
+  
+  .buy-btn:hover {
+    background-color: #ff0066; /* Darker pink background color on hover */
+  }
+  
+  .return-btn {
+    /* Styles for the return button (already defined in the previous response) */
+  }
+  
+  .return-btn a {
+    /* Styles for the return button link (already defined in the previous response) */
+  }
+  
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    /* Styles for smaller screens (already defined in the previous response) */
+  }
+  

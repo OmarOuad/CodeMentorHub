@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import Navbar from './Nav';
+import './Discussions.css'; // Import the CSS file
+import { Container } from 'react-bootstrap'; // Import Bootstrap Container
+import Navbar from './components/navbar/Nav';
+import Footer from './components/Footer';
+
 
 const Discussions = () => {
   const [name, setName] = useState('');
@@ -31,36 +35,52 @@ const Discussions = () => {
 
   return (
     <div>
-        <Navbar />
-      <h1>Comments</h1>
+      <Navbar />
+    <Container className="d-flex flex-column justify-content-center align-items-center vh-100">
+      <div className="container discussions-container">
+        <h1>Discussions</h1>
 
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" value={name} onChange={handleNameChange} />
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              className="form-control"
+              value={name}
+              onChange={handleNameChange}
+            />
+          </div>
 
-        <div>
-          <label htmlFor="comment">Comment:</label>
-          <textarea id="comment" value={comment} onChange={handleCommentChange} />
-        </div>
+          <div className="form-group">
+            <label htmlFor="comment">Comment:</label>
+            <textarea
+              id="comment"
+              className="form-control"
+              value={comment}
+              onChange={handleCommentChange}
+            />
+          </div>
 
-        <button type="submit">Submit</button>
-      </form>
+          <button type="submit" className="btn btn-primary">Submit</button>
+        </form>
 
-      <h2>Previous Comments:</h2>
-      {comments.length > 0 ? (
-        <ul>
-          {comments.map((comment, index) => (
-            <li key={index}>
-              <strong>{comment.name}: </strong>
-              {comment.comment}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No comments yet.</p>
-      )}
+        <h2>Previous Comments:</h2>
+        {comments.length > 0 ? (
+          <ul className="list-group">
+            {comments.map((comment, index) => (
+              <li key={index} className="list-group-item">
+                <strong>{comment.name}: </strong>
+                {comment.comment}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No comments yet.</p>
+        )}
+      </div>
+    </Container>
+    <Footer />
     </div>
   );
 };

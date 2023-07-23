@@ -1,0 +1,40 @@
+/* TutorRegistration.css */
+
+/* Styling for the dark purple-themed background */
+.dark-purple-background {
+    background-color: --primary-bg; /* Dark purple background color */
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Styling for the form container */
+  .tutor-registration-form {
+    background-color: #410579; /* White background color for the form */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle effect */
+  }
+  
+  /* Styling for the Next button */
+  .btn-primary {
+    background-color: #800080; /* Dark purple button color */
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #6a006a; /* Slightly darker purple on hover */
+  }
+  
+  /* Styling for the labels and text in the form */
+  .form-label,
+  .form-check-label {
+    color: #ffffff; /* White text color for labels */
+  }
+  
+  /* Styling for error messages */
+  .invalid-feedback {
+    color: #ff0000; /* Red error message color */
+  }
+  
+  /* Additional styles as needed */
+  

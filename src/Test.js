@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import Navbar from './Nav';
+import Navbar from './components/navbar/Nav';
 import { Accordion, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import Footer from './components/Footer';
 
 export default function App() {
   const [selected, setSelected] = useState(null);
@@ -82,6 +83,7 @@ export default function App() {
       </Col>
           </Row>
       </div>
+      <Footer />
     </>
   );
 }

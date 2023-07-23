@@ -1,0 +1,56 @@
+.purchase-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .tick-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .purchase-success h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d67df5; /* Dark purple text color for the success message */
+    margin-bottom: 10px;
+  }
+  
+  .purchase-success p {
+    font-size: 18px;
+    color: #fff; /* White text color for the success message */
+    margin-bottom: 30px;
+  }
+  
+  .return-btn {
+    margin-top: 20px;
+  }
+  
+  /* Additional custom styles */
+  .purchase-success {
+    background-color: #34025e; /* Dark purple background color for the container */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  }
+  
+  .text-success {
+    color: #a652b7; /* Light purple color for the success message */
+  }
+  
+  .return-btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #682b80; /* Darker purple background color for the button */
+    transition: background-color 0.3s ease;
+  }
+  
+  .return-btn:hover {
+    background-color: #5e246f; /* Slightly lighter purple background color on hover */
+  }
+  

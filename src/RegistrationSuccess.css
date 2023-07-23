@@ -1,0 +1,17 @@
+/* RegistrationSuccess.css */
+.registration-success {
+    background-color: #4b0082;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .registration-success h2,
+  .registration-success p {
+    color: #fff;
+    text-align: center;
+  }
+  
+  .checkmark-img {
+    width: 100px;
+  }
+  

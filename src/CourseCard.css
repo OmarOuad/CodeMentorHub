@@ -1,0 +1,14 @@
+/* Courses.css (or your CSS file) */
+.course-card-link {
+  display: block; /* Convert the link to a block element to take full width of the card */
+  text-decoration: none; /* Remove the default underline style for links */
+  color: #333; /* Set the text color to your preferred color */
+  transition: background-color 0.2s; /* Add a smooth transition effect on hover */
+
+  /* Add any other styling you want for the link, e.g., padding, border, etc. */
+}
+
+.course-card-link:hover {
+  background-color: #f0f0f0; /* Add a background color on hover */
+  /* Add any other hover styles you want */
+}

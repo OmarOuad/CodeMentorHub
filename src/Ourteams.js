@@ -1,8 +1,9 @@
 import React from 'react';
-import Navbar from './Nav';
+import Navbar from './components/navbar/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col , Card} from 'react-bootstrap';
 import myIcon from './assets/myicon.jpeg'
+import Footer from './components/Footer';
 
 export default function App() {
   const introStyles = {
@@ -35,7 +36,7 @@ export default function App() {
             </Row>
         </Container>
       </section>
-
+      <Footer />
 
       
       
