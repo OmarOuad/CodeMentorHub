@@ -27,7 +27,7 @@ const PurchaseSuccess = () => {
             className="tick-image"
           />
           <h2 className="text-success">Purchase Successful!</h2>
-          <p>Thank you for your purchase.</p>
+          <p>Thank you for your purchase. You will receive further instructions about your tutors by email.</p>
           <Link to="/CodeMentorHub/courses" className="btn btn-primary return-btn">
             Back to Courses
           </Link>
