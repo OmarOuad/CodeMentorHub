@@ -226,6 +226,58 @@ const TutorRegistration = () => {
                   </label>
                 </div>
                 {/* Add more languages as needed */}
+                <div className="form-check form-check-inline">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="Cplus"
+                    value="Cplus"
+                    checked={selectedLanguages.includes('Cplus')}
+                    onChange={handleLanguageChanges}
+                  />
+                  <label className="form-check-label" htmlFor="Cplus">
+                    C++
+                  </label>
+                </div>
+                <div className="form-check form-check-inline">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="C"
+                    value="C"
+                    checked={selectedLanguages.includes('C')}
+                    onChange={handleLanguageChanges}
+                  />
+                  <label className="form-check-label" htmlFor="C">
+                    C
+                  </label>
+                </div>
+                <div className="form-check form-check-inline">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="Java"
+                    value="Java"
+                    checked={selectedLanguages.includes('Java')}
+                    onChange={handleLanguageChanges}
+                  />
+                  <label className="form-check-label" htmlFor="Java">
+                  Java
+                  </label>
+                </div>
+                <div className="form-check form-check-inline">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="PhP"
+                    value="PhP"
+                    checked={selectedLanguages.includes('PhP')}
+                    onChange={handleLanguageChanges}
+                  />
+                  <label className="form-check-label" htmlFor="PhP">
+                  PhP
+                  </label>
+                </div>
               </div>
               {languagesError && <div className="invalid-feedback text-white">{languagesError}</div>}
             </div>
