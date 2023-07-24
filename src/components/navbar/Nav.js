@@ -20,17 +20,9 @@ const Navbar = ({ onLanguageChange }) => {
           <Link to='/CodeMentorHub/ourteams'>{t('navbar.our_teams')}</Link>
           <Link to='/CodeMentorHub/faqpage'>FAQ</Link>
           <Link to='/CodeMentorHub/discussions'>{t('navbar.discussions')}</Link>
+          <Link to='/CodeMentorHub/TutorRegistration'>{t('navbar.become_a_tutor')}</Link>
+            
           
-          <a
-            href="/CodeMentorHub/TutorRegistration"
-            style={{
-              color: 'white',
-              backgroundColor: '#f1356d',
-              borderRadius: '8px'
-            }}
-          >
-            {t('navbar.become_a_tutor')}
-          </a>
         </div>
         {/* Language Switch */}
         <div className="language-switch">
