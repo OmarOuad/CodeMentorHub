@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .footer {
+    background-color: var(--primary-bg);
+    color: var(--secondary-text);
+    padding: 20px;
+    text-align: center;
+    /* Update the background color to be a little bit darker */
+    background-color: #1b0033;
+  
+    /* Set the footer to be at the bottom */
+    position:relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  

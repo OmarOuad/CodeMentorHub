@@ -4,8 +4,15 @@ import checkmark from './assets/checkmark.png';
 import { useNavigate } from 'react-router-dom';
 import './RegistrationSuccess.css'; // Import custom CSS file for styling
 import Navbar from './components/navbar/Nav';
+import { useTranslation } from 'react-i18next';
 
 const RegistrationSuccess = () => {
+  const { t, i18n } = useTranslation();
+
+  // Language switch handler
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+  };
   const navigate = useNavigate();
 
   const handleReturnToHome = () => {
@@ -15,7 +22,7 @@ const RegistrationSuccess = () => {
 
   return (
     <div>
-        <Navbar />
+      <Navbar onLanguageChange={handleLanguageChange} />
     <div className="container mt-5 registration-success">
       <h2 className="text-white">Registration Successful!</h2>
       <div className="text-center">

@@ -5,8 +5,15 @@ import courses from './courseData'; // Import the courses array
 import './CourseDetails.css'; // Import the custom CSS file for additional styling
 import Navbar from './components/navbar/Nav';
 import Footer from './components/Footer';
+import { useTranslation } from 'react-i18next';
 
 const CourseDetails = () => {
+  const { t, i18n } = useTranslation();
+
+  // Language switch handler
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+  };
   const { id } = useParams();
 
   // Find the course details based on the extracted course ID
@@ -18,7 +25,7 @@ const CourseDetails = () => {
 
   return (
   <div>
-  <Navbar />
+      <Navbar onLanguageChange={handleLanguageChange} />
     <Container className="course-details">
         
       <h2 className="course-title">{course.language}</h2>

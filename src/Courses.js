@@ -5,11 +5,17 @@ import Navbar from './components/navbar/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Sidebar from './Sidebar';
 import Footer from './components/Footer';
-
+import { useTranslation } from 'react-i18next';
 // Import the courses array from the separate file
 import courses from './courseData';
 
 const Courses = () => {
+  const { t, i18n } = useTranslation();
+
+  // Language switch handler
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+  };
   const [selectedLanguageFilter, setSelectedLanguageFilter] = useState('all');
   const [selectedFieldFilter, setSelectedFieldFilter] = useState('all');
 
@@ -28,7 +34,7 @@ const Courses = () => {
   return (
     <>
       <div className="App">
-        <Navbar />
+      <Navbar onLanguageChange={handleLanguageChange} />
         <div className="content">
           <Sidebar
             onFilterChange={handleFilterChange}

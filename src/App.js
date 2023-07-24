@@ -11,7 +11,7 @@ import BuyCourse from './BuyCourse';
 import PurchaseSuccess from './PurchaseSuccess';
 import TutorRegistration from './TutorRegistration';
 import RegistrationSuccess from './RegistrationSuccess';
-
+import FAQPage from './Faqpage'
 // Import the required i18next modules
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
@@ -53,6 +53,7 @@ const App = () => {
         <Route path="/CodeMentorHub/PurchaseSuccessful" element={<PurchaseSuccess />} />
         <Route path="/CodeMentorHub/TutorRegistration" element={<TutorRegistration />} />
         <Route path="/CodeMentorHub/RegistrationSuccess" element={<RegistrationSuccess />} />
+        <Route path="/CodeMentorHub/faqpage" element={<FAQPage />} />
       </Routes>
     </Router>
   );

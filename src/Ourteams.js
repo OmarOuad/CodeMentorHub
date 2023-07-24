@@ -4,8 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col , Card} from 'react-bootstrap';
 import myIcon from './assets/myicon.jpeg'
 import Footer from './components/Footer';
+import { useTranslation } from 'react-i18next';
 
 export default function App() {
+  const { t, i18n } = useTranslation();
+
+  // Language switch handler
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+  };
   const introStyles = {
     backgroundImage: "url('/assets/R.jpeg')",
     backgroundSize: 'cover',
@@ -14,7 +21,7 @@ export default function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar onLanguageChange={handleLanguageChange} />
 
       <section >
         <Container fluid>

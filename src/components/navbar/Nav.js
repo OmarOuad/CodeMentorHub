@@ -18,8 +18,9 @@ const Navbar = ({ onLanguageChange }) => {
           <Link to='/CodeMentorHub/courses'>{t('navbar.courses')}</Link>
           <Link to='/CodeMentorHub/tests'>{t('navbar.tests')}</Link>
           <Link to='/CodeMentorHub/ourteams'>{t('navbar.our_teams')}</Link>
+          <Link to='/CodeMentorHub/faqpage'>FAQ</Link>
           <Link to='/CodeMentorHub/discussions'>{t('navbar.discussions')}</Link>
-
+          
           <a
             href="/CodeMentorHub/TutorRegistration"
             style={{
@@ -33,8 +34,18 @@ const Navbar = ({ onLanguageChange }) => {
         </div>
         {/* Language Switch */}
         <div className="language-switch">
-          <button onClick={() => onLanguageChange('en')}>EN</button>
-          <button onClick={() => onLanguageChange('fr')}>FR</button>
+          <button
+            onClick={() => onLanguageChange('en')}
+            style={{ backgroundColor: '#f1356d' }} // Set background color to red
+          >
+            EN
+          </button>
+          <button
+            onClick={() => onLanguageChange('fr')}
+            style={{ backgroundColor: '#f1356d' }} // Set background color to red
+          >
+            FR
+          </button>
         </div>
       </nav>
     </div>

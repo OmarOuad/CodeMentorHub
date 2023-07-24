@@ -4,8 +4,15 @@ import { Accordion, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import Footer from './components/Footer';
-
+import { useTranslation } from 'react-i18next';
+import "./Test.css";
 export default function App() {
+  const { t, i18n } = useTranslation();
+
+  // Language switch handler
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+  };
   const [selected, setSelected] = useState(null);
 
   const toggle = (i) => {
@@ -48,7 +55,7 @@ export default function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar onLanguageChange={handleLanguageChange} />
       <section id="intro">
         <Container>
           <Row className="justify-content-center p-5">

@@ -3,9 +3,18 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import RegistrationSuccess from './RegistrationSuccess';
 import Navbar from './components/navbar/Nav';
+import { useTranslation } from 'react-i18next';
+
 import './TutorRegistration.css'; // Import custom CSS file for styling
 
 const TutorRegistration = () => {
+  const { t, i18n } = useTranslation();
+
+  // Language switch handler
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+  };
+
   const [email, setEmail] = useState('');
   const [yearOfStudy, setYearOfStudy] = useState('');
   const [major, setMajor] = useState('');
@@ -36,7 +45,7 @@ const TutorRegistration = () => {
     setMajorError(value ? '' : 'Please enter your major of study.');
   };
 
-  const handleLanguageChange = (event) => {
+  const handleLanguageChanges = (event) => {
     const { value, checked } = event.target;
     if (checked) {
       setSelectedLanguages([...selectedLanguages, value]);
@@ -118,9 +127,13 @@ const TutorRegistration = () => {
     }
   };
 
+  const handleBack = () => {
+    setStep(1);
+  };
+
   return (
     <div className="dark-purple-background">
-      <Navbar />
+      <Navbar onLanguageChange={handleLanguageChange} />
       <div className="container mt-5 tutor-registration-form">
         {step === 1 && (
           <div>
@@ -185,141 +198,35 @@ const TutorRegistration = () => {
                 Select Programming Languages (Choose multiple):
               </label>
               <div className="mb-3">
-            
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  id="javascript"
-                  value="JavaScript"
-                  checked={selectedLanguages.includes('JavaScript')}
-                  onChange={handleLanguageChange}
-                />
-                <label className="form-check-label" htmlFor="javascript">
-                  JavaScript
-                </label>
+                <div className="form-check form-check-inline">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="javascript"
+                    value="JavaScript"
+                    checked={selectedLanguages.includes('JavaScript')}
+                    onChange={handleLanguageChanges}
+                  />
+                  <label className="form-check-label" htmlFor="javascript">
+                    JavaScript
+                  </label>
+                </div>
+                {/* Add more language options */}
+                <div className="form-check form-check-inline">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="python"
+                    value="Python"
+                    checked={selectedLanguages.includes('Python')}
+                    onChange={handleLanguageChanges}
+                  />
+                  <label className="form-check-label" htmlFor="python">
+                    Python
+                  </label>
+                </div>
+                {/* Add more languages as needed */}
               </div>
-              {/* Add more language options */}
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  id="python"
-                  value="Python"
-                  checked={selectedLanguages.includes('Python')}
-                  onChange={handleLanguageChange}
-                />
-                <label className="form-check-label" htmlFor="python">
-                  Python
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  id="java"
-                  value="Java"
-                  checked={selectedLanguages.includes('Java')}
-                  onChange={handleLanguageChange}
-                />
-                <label className="form-check-label" htmlFor="java">
-                  Java
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  id="c"
-                  value="C"
-                  checked={selectedLanguages.includes('C')}
-                  onChange={handleLanguageChange}
-                />
-                <label className="form-check-label" htmlFor="c">
-                  C
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  id="cplus"
-                  value="C++"
-                  checked={selectedLanguages.includes('C++')}
-                  onChange={handleLanguageChange}
-                />
-                <label className="form-check-label" htmlFor="cplus">
-                  C++
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  id="csharp"
-                  value="C#"
-                  checked={selectedLanguages.includes('C#')}
-                  onChange={handleLanguageChange}
-                />
-                <label className="form-check-label" htmlFor="csharp">
-                  C#
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  id="swift"
-                  value="Swift"
-                  checked={selectedLanguages.includes('Swift')}
-                  onChange={handleLanguageChange}
-                />
-                <label className="form-check-label" htmlFor="swift">
-                  Swift
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  id="ruby"
-                  value="Ruby"
-                  checked={selectedLanguages.includes('Ruby')}
-                  onChange={handleLanguageChange}
-                />
-                <label className="form-check-label" htmlFor="ruby">
-                  Ruby
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  id="go"
-                  value="Go"
-                  checked={selectedLanguages.includes('Go')}
-                  onChange={handleLanguageChange}
-                />
-                <label className="form-check-label" htmlFor="go">
-                  Go
-                </label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  id="php"
-                  value="PHP"
-                  checked={selectedLanguages.includes('PHP')}
-                  onChange={handleLanguageChange}
-                />
-                <label className="form-check-label" htmlFor="php">
-                  PHP
-                </label>
-              {/* Add more languages as needed */}
-            </div>
-            {languagesError && <div className="invalid-feedback">{languagesError}</div>}
-          </div>
               {languagesError && <div className="invalid-feedback text-white">{languagesError}</div>}
             </div>
             <div className="mb-3">
@@ -335,6 +242,9 @@ const TutorRegistration = () => {
               />
               {resumeError && <div className="invalid-feedback text-white">{resumeError}</div>}
             </div>
+            <button className="btn btn-secondary" onClick={handleBack}>
+              Back
+            </button>
             <button className="btn btn-primary" onClick={handleNext}>
               Register
             </button>

@@ -4,8 +4,15 @@ import { Container, Form, Button } from 'react-bootstrap';
 import './BuyCourse.css'; // Import the custom CSS file for additional styling
 import Navbar from './components/navbar/Nav';
 import Footer from './components/Footer';
+import { useTranslation } from 'react-i18next';
 
 const BuyCourse = () => {
+  const { t, i18n } = useTranslation();
+
+  // Language switch handler
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+  };
   const { id } = useParams();
   const navigate = useNavigate();
   // State to store the form data
@@ -40,7 +47,7 @@ const BuyCourse = () => {
 
   return (
     <div>
-        <Navbar />
+      <Navbar onLanguageChange={handleLanguageChange} />
     <Container className="buy-course">
       <h2>Buy Course</h2>
       <Form onSubmit={handleSubmit}>

@@ -5,12 +5,19 @@ import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 import './PurchaseSuccess.css'; // Import the custom CSS file for additional styling
 import Navbar from './components/navbar/Nav';
 import Footer from './components/Footer';
+import { useTranslation } from 'react-i18next';
 
 const PurchaseSuccess = () => {
+  const { t, i18n } = useTranslation();
+
+  // Language switch handler
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+  };
 
   return (
     <div>
-    <Navbar />
+      <Navbar onLanguageChange={handleLanguageChange} />
     <Container className="purchase-success">
       <Row className="justify-content-center">
         <Col xs={12} md={6} className="text-center">

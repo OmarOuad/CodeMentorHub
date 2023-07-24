@@ -4,8 +4,15 @@ import { Container } from 'react-bootstrap'; // Import Bootstrap Container
 import Navbar from './components/navbar/Nav';
 import Footer from './components/Footer';
 
+import { useTranslation } from 'react-i18next';
 
 const Discussions = () => {
+  const { t, i18n } = useTranslation();
+
+  // Language switch handler
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+  };
   const [name, setName] = useState('');
   const [comment, setComment] = useState('');
   const [comments, setComments] = useState([]);
@@ -35,7 +42,7 @@ const Discussions = () => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar onLanguageChange={handleLanguageChange} />
     <Container className="d-flex flex-column justify-content-center align-items-center vh-100">
       <div className="container discussions-container">
         <h1>Discussions</h1>

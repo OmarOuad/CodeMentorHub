@@ -1,0 +1,10 @@
+/* Custom styles for the FAQ accordion */
+.faq {
+    background-color: #270046; /* Change the background color to purple */
+    color: #fff; /* Change the font color to white */
+  }
+  
+  .custom-accordion {
+    padding: 10px;
+  }
+  

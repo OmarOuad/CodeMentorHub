@@ -6,6 +6,7 @@
       "our_teams": "Our Teams",
       "discussions": "Discussions",
       "become_a_tutor": "Become a tutor"
+      
     },
     "home": {
       "title": "CodeMentorHub",
@@ -13,7 +14,8 @@
       "our_purpose": "Our purpose",
       "purpose_text1": "Welcome to uOttawa's exclusive online platform for programming and computer science courses! Our website brings together the brightest minds within our university community to deliver exceptional educational content tailored specifically for our students.",
       "purpose_text2": "The story of our website began with a simple yet powerful vision: to empower students with the knowledge and skills necessary to excel in the world of programming and computer science. We recognized the immense talent and expertise that resides within our university, and we wanted to provide a platform for these students to share their insights and insights with their peers.",
-      "purpose_text3": "Driven by our passion for learning and innovation, we embarked on a journey to create an online hub where students could access high-quality courses taught by their fellow classmates. We firmly believe that students possess a unique perspective, and their fresh and relatable teaching approach can truly resonate with their peers."
+      "purpose_text3": "Driven by our passion for learning and innovation, we embarked on a journey to create an online hub where students could access high-quality courses taught by their fellow classmates. We firmly believe that students possess a unique perspective, and their fresh and relatable teaching approach can truly resonate with their peers.",
+      "courses":"These are some courses to get you started"
     }
   }
   
